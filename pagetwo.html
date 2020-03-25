@@ -1,0 +1,20 @@
+---
+layout: default
+title: page two
+---
+
+<h2>Page two</h2>
+
+<!-- Organizations -->
+{% assign rows = site.data.pagetwo %}
+{% assign rows = rows | sort:"Name" %}
+
+<!-- Document -->
+
+{% for row in rows %}
+
+<ul>
+<li><strong>{{ row.Name }}</strong> ({{ row.Image }}, {{ row.Date }})</li>
+</ul>
+
+{% endfor %}
